@@ -12,6 +12,7 @@ def prefix(str):
 
 urlpatterns = [
     path(prefix("admin/"), admin.site.urls),
+    path(prefix("fingerprint/"), include("api.fingerprint.urls")),
     path(prefix("health/"), include("api.health.urls")),
     path(prefix("image/"), include("api.image.urls")),
     path(prefix("core/"), include("api.core.urls")),
